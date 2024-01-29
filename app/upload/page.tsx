@@ -232,6 +232,11 @@ const Upload = () => {
           </div>
         </div>
 
+        {objData.length && (
+          <span className="m-12 mb-8 self-start font-bold text-xl">
+            Uploads
+          </span>
+        )}
         <div className="w-[90%] overflow-x-scroll">
           <Table
             objData={objData}

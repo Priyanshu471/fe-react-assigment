@@ -12,17 +12,6 @@ const Table = ({ objData, onSelect, handleFilter }: TableProps) => {
     <>
       {objData.length > 0 ? (
         <>
-          <span
-            className="table_title"
-            style={{
-              fontWeight: "bold",
-              fontSize: "1.2rem",
-              marginBottom: "2rem",
-              alignSelf: "flex-start",
-            }}
-          >
-            Uploads
-          </span>
           <div className="excel_table ">
             <div className="table_row_head ">
               <div>SI No.</div>

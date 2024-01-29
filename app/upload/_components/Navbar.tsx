@@ -32,7 +32,7 @@ const Navbar = ({ toggle, menuToggle, isMobile }: NavbarProps) => {
       className={
         toggle
           ? isMobile
-            ? `absolute w-3/4 bg-white h-lvh pt-8 rounded-tl-none rounded-bl-none rounded-[10px]`
+            ? `absolute w-3/4 bg-white h-lvh pt-8 rounded-tl-none rounded-bl-none rounded-[10px] z-[100] shadow-md`
             : ""
           : isMobile
           ? `hidden`
