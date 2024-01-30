@@ -2,18 +2,33 @@ import Image from "next/image";
 import Link from "next/link";
 import GoogleSignIn from "../../_images/GoogleSignIn.svg";
 import AppleSignIn from "../../_images//AppleSignIn.svg";
-import logo from "../../_images/logo2.svg";
+import logo from "../../_images/logo3.svg";
 import SocialLinks from "../../_images/SocialLinks-dark.svg";
 
-const SignIn = () => {
+interface SignInProps {
+  isMobile: boolean;
+}
+const SignIn = ({ isMobile }: SignInProps) => {
   return (
-    <div className="flex flex-col items-center justify-center w-1/2 h-full px-[6%]">
-      <div className="hidden">
-        <div className="relative w-24">
-          <Image fill src={logo} alt="logo" />
+    <div
+      className={
+        isMobile
+          ? "w-full justify-start items-start p-0  flex flex-col h-full"
+          : "flex flex-col items-center justify-center w-1/2 h-full px-[6%]"
+      }
+    >
+      <div className={isMobile ? "flex w-full h-32 p-6 bg-primary" : "hidden"}>
+        <div className="relative w-24 ">
+          <Image src={logo} alt="logo" />
         </div>
       </div>
-      <div className="flex flex-col w-3/4 h-fit">
+      <div
+        className={
+          isMobile
+            ? "flex w-full justify-center p-6 flex-col h-fit"
+            : "flex flex-col w-3/4 h-fit"
+        }
+      >
         <span className="font-bold text-4xl mb-2">Sign In</span>
         <span className="text-sm mb-6">Sign in to your account</span>
         <div className="flex justify-between mb-6 w-full">
@@ -46,12 +61,18 @@ const SignIn = () => {
             </button>
           </Link>
         </div>
-        <span className="text-sm cursor-pointer self-center text-#858585">
+        <span
+          className={
+            isMobile
+              ? " text-lg flex flex-col gap-4 justify-center items-center"
+              : "text-sm cursor-pointer self-center text-#858585"
+          }
+        >
           Don’t have an account?{" "}
           <span className="text-[#346BD4]">Register here</span>
         </span>
       </div>
-      <div className="w-full justify-center hidden">
+      <div className={isMobile ? "flex w-full justify-center" : "hidden"}>
         <Image src={SocialLinks} alt="mergedIcons" />
       </div>
     </div>
