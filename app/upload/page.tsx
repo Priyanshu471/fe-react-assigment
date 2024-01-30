@@ -106,7 +106,7 @@ const Upload = () => {
     <div className="w-full min-h-screen flex relative">
       <Navbar toggle={toggle} menuToggle={menuToggle} isMobile={isMobile} />
 
-      <div className="flex flex-col flex-1 px-6 overflow-hidden overflow-x-scroll bg-[#fafafb]">
+      <div className="flex flex-col flex-1 px-6 overflow-hidden bg-[#fafafb]">
         <div className="flex items-center justify-between w-full h-24">
           <div className={isMobile ? "flex" : "hidden"}>
             <Image
@@ -232,12 +232,12 @@ const Upload = () => {
           </div>
         </div>
 
-        {objData.length && (
+        {objData.length > 0 && (
           <span className="m-12 mb-8 self-start font-bold text-xl">
             Uploads
           </span>
         )}
-        <div className="w-[90%] overflow-x-scroll">
+        <div className="w-[90%] overflow-x-scroll md:overflow-hidden ">
           <Table
             objData={objData}
             onSelect={onSelect}
