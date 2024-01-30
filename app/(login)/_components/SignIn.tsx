@@ -13,7 +13,7 @@ const SignIn = ({ isMobile }: SignInProps) => {
     <div
       className={
         isMobile
-          ? "w-full justify-start items-start p-0  flex flex-col h-full"
+          ? "w-full justify-start items-start p-0 flex flex-col h-full"
           : "flex flex-col items-center justify-center w-1/2 h-full px-[6%]"
       }
     >
