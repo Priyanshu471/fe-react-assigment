@@ -17,7 +17,7 @@ const SignIn = ({ isMobile }: SignInProps) => {
           : "flex flex-col items-center justify-center w-1/2 h-full px-[6%]"
       }
     >
-      <div className={isMobile ? "flex w-full h-32 p-6 bg-primary" : "hidden"}>
+      <div className={isMobile ? "flex w-full h-20 p-6 bg-primary" : "hidden"}>
         <div className="relative w-24 ">
           <Image src={logo} alt="logo" />
         </div>
